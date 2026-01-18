@@ -1,0 +1,210 @@
+/* Global Style  Start*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1a0b2e;
+    color: #ffffff;
+}
+.font-inter {
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #f8ef42, #f321d7, #9d1df3);
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-primary:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+/* Global Style  End*/
+
+/* Navbar style start */
+.nav-btn a {
+    text-decoration: none;
+}
+.btn-primary span {
+    font-size: 28px;
+    line-height: 0;
+    margin-top: -2px;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary :hover span {
+    transform: translateX(8px);
+}
+.btn-primary .arrow {
+    font-size: 22px;
+    transition: transform 0.3s ease; /* Transition for the arrow specifically */
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Pushes the 3 groups apart */
+    align-items: center;
+    padding: 15px 60px;
+}
+.nav-logo {
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+.nav-logo span {
+    background: linear-gradient(to right, #f8ef42, #f321d7, #9d1df3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.nav-menu li:hover {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    gap: 10px;
+    background-color: #4bc819;
+    transform: translateY(-3px);
+}
+.nav-menu li:hover a {
+    color: #ffffff;
+}
+/* Navbar style End */
+
+/* Hero Or Bannar section start */
+.hero-section {
+    position: relative;
+    height: 80vh; /* Takes up most of the screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('./assets/hero-bg.png'); /* Your audio wave background */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* 1. Podcast Circle with Glowing Effect */
+.podcast-circle-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.podcast-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #fceb44, #f321d7, #9d1df3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    box-shadow: 0 0 40px rgba(243, 33, 215, 0.4); /* Glow effect */
+}
+
+.badge-new {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    background: #00ffaa;
+    color: #0b031a;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.5);
+}
+
+/* 2. Text Content */
+.hero-title {
+    font-size: 64px;
+    margin: 0 0 10px 0;
+}
+
+.hero-title span {
+    background: linear-gradient(to right, #fceb44, #f321d7, #9d1df3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #b3b3b3;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+/* 3. Buttons Layout */
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-spotify {
+    background: linear-gradient(to right, #fceb44, #f321d7, #9d1df3);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #33e8b0; /* Greenish border from image */
+    padding: 12px 28px;
+    border-radius: 50px;
+    color: #33e8b0;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(51, 232, 176, 0.1);
+}
+/* Hero Or Bannar section End */

@@ -33,6 +33,23 @@ body {
     opacity: 0.9;
 }
 
+.btn-outline-primary {
+    background: transparent;
+    border: 1px solid #33e8b0;
+    padding: 12px 28px;
+    border-radius: 50px;
+    color: #33e8b0;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: rgba(51, 232, 176, 0.1);
+}
 /* Global Style  End*/
 
 /* Navbar style start */
@@ -51,11 +68,11 @@ body {
 }
 .btn-primary .arrow {
     font-size: 22px;
-    transition: transform 0.3s ease; /* Transition for the arrow specifically */
+    transition: transform 0.3s ease;
 }
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Pushes the 3 groups apart */
+    justify-content: space-between;
     align-items: center;
     padding: 15px 60px;
 }
@@ -106,19 +123,17 @@ body {
 /* Hero Or Bannar section start */
 .hero-section {
     position: relative;
-    height: 80vh; /* Takes up most of the screen height */
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('./assets/hero-bg.png'); /* Your audio wave background */
+    background-image: url('./assets/hero-bg.png');
     background-size: cover;
     background-position: center;
     color: white;
     overflow: hidden;
 }
-
-/* 1. Podcast Circle with Glowing Effect */
 .podcast-circle-wrapper {
     position: relative;
     display: inline-block;
@@ -134,7 +149,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 60px;
-    box-shadow: 0 0 40px rgba(243, 33, 215, 0.4); /* Glow effect */
+    box-shadow: 0 0 40px rgba(243, 33, 215, 0.4);
 }
 
 .badge-new {
@@ -149,8 +164,6 @@ body {
     font-weight: bold;
     box-shadow: 0 0 15px rgba(0, 255, 170, 0.5);
 }
-
-/* 2. Text Content */
 .hero-title {
     font-size: 64px;
     margin: 0 0 10px 0;
@@ -169,15 +182,13 @@ body {
     max-width: 600px;
     margin: 0 auto 40px auto;
 }
-
-/* 3. Buttons Layout */
 .hero-btns {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
 
-.btn-spotify {
+/* .btn-spotify {
     background: linear-gradient(to right, #fceb44, #f321d7, #9d1df3);
     border: none;
     padding: 12px 28px;
@@ -188,23 +199,196 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-}
+} */
 
-.btn-outline {
-    background: transparent;
-    border: 1px solid #33e8b0; /* Greenish border from image */
-    padding: 12px 28px;
-    border-radius: 50px;
-    color: #33e8b0;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-}
-
-.btn-outline:hover {
-    background: rgba(51, 232, 176, 0.1);
-}
 /* Hero Or Bannar section End */
+
+/* About Section Start */
+.about-section {
+    padding: 100px 5%;
+    color: white;
+    text-align: center;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 1. Typography */
+.section-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.description p {
+    color: #b3b3b3;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.highlight-text {
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #1f1435;
+    margin: 60px 0;
+}
+
+/* 2. Statistics Row */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #00ffaa;
+    letter-spacing: -1px;
+}
+
+.stat-number .star {
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+.stat-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #b3b3b3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* About Section End */
+/* Why Choose Section Start */
+/* Container Setup */
+.why-choose {
+    padding: 80px 5%;
+    color: white;
+}
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    font-weight: 800;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas:
+        'PremiumAudio MobileFriendly MobileFriendly'
+        'PremiumAudio GlobalCommunity GlobalCommunity'
+        'ExclusiveInterviews ExclusiveInterviews RichResources';
+    gap: 10px;
+}
+
+.feature-card {
+    background-color: #160a2c; /* Main card color */
+    padding: 40px;
+    border-radius: 24px;
+
+    /* Subtle border that isn't too bright yet */
+    border: 1px solid rgba(157, 29, 243, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    /* Smooth transition for every property */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Subtle shadow to lift the card slightly off the dark background */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+.premium-audio {
+    grid-area: PremiumAudio;
+}
+.mobile-friendly {
+    grid-area: MobileFriendly;
+}
+.global-community {
+    grid-area: GlobalCommunity;
+}
+.exclusive-interviews {
+    grid-area: ExclusiveInterviews;
+}
+.rich-resources {
+    grid-area: RichResources;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: block;
+}
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.feature-card p {
+    color: #b3b3b3;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+/* .feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #f321d7;
+    box-shadow: 0 0 25px rgba(243, 33, 215, 0.4);
+    transition: all 0.3s ease;
+} */
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle,
+        rgba(243, 33, 215, 0.05) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+.feature-card:hover {
+    transform: translateY(
+        -12px
+    ); /* Moves up slightly more for a premium feel */
+    border-color: #f321d7;
+
+    /* The Intense Neon Glow from your image */
+    box-shadow: 0 0 30px rgba(243, 33, 215, 0.4);
+    background-color: #1c0d3a; /* Slightly brightens the card background on hover */
+}
+/* Why Choose Section End */
+
+/* Responsive Start */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+/* Responsive End */

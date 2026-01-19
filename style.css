@@ -22,14 +22,14 @@ body {
     background: linear-gradient(to right, #f8ef42, #f321d7, #9d1df3);
     border: none;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 1.09rem;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .btn-primary:hover {
-    transform: scale(1.08);
+    transform: scale(0.8);
     opacity: 0.9;
 }
 
@@ -55,9 +55,10 @@ body {
 /* Navbar style start */
 .nav-btn a {
     text-decoration: none;
+    flex: 0 0 auto;
 }
 .btn-primary span {
-    font-size: 28px;
+    font-size: 1.9rem;
     line-height: 0;
     margin-top: -2px;
     transition: transform 0.3s ease;
@@ -67,7 +68,7 @@ body {
     transform: translateX(8px);
 }
 .btn-primary .arrow {
-    font-size: 22px;
+    font-size: 1.4rem;
     transition: transform 0.3s ease;
 }
 .nav-container {
@@ -75,12 +76,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 60px;
+    position: relative;
 }
 .nav-logo {
     color: white;
     font-size: 28px;
     font-weight: 800;
     letter-spacing: -1px;
+    flex: 0 0 auto;
 }
 .nav-logo span {
     background: linear-gradient(to right, #f8ef42, #f321d7, #9d1df3);
@@ -95,6 +98,8 @@ body {
     gap: 35px;
     margin: 0;
     padding: 0;
+    flex: 1;
+    justify-content: center;
 }
 .nav-menu a {
     text-decoration: none;
@@ -102,6 +107,14 @@ body {
     font-size: 16px;
     transition: color 0.3s ease;
 }
+/* .nav-menu li {
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 20px;
+} */
 .nav-menu li:hover {
     padding: 10px 20px;
     border-radius: 6px;
@@ -120,10 +133,11 @@ body {
 }
 
 /* hamburger menu Start */
+.nav-btn-mobile,
 .menu-checkbox,
-.hamburger,
-.nav-btn-mobile {
-    display: none; /* Hidden on Desktop */
+.hamburger-wrapper,
+.menu-overlay {
+    display: none;
 }
 
 .menu-overlay {

@@ -50,6 +50,26 @@ body {
 .btn-outline-primary:hover {
     background: rgba(51, 232, 176, 0.1);
 }
+@keyframes flowGradient {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+@keyframes badgePulse {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 /* Global Style  End*/
 
 /* Navbar style start */
@@ -84,13 +104,35 @@ body {
     font-weight: 800;
     letter-spacing: -1px;
     flex: 0 0 auto;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 .nav-logo span {
-    background: linear-gradient(to right, #f8ef42, #f321d7, #9d1df3);
+    background: linear-gradient(
+        to right,
+        #f8ef42,
+        #f321d7,
+        #9d1df3,
+        #f321d7,
+        #f8ef42
+    );
+    background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
+    animation: flowGradient 3s linear infinite;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+.nav-logo:hover span {
+    filter: drop-shadow(0 0 10px rgba(243, 33, 215, 0.5));
+    animation-duration: 1.5s;
 }
 .nav-menu {
     display: flex;
@@ -107,14 +149,6 @@ body {
     font-size: 16px;
     transition: color 0.3s ease;
 }
-/* .nav-menu li {
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    padding: 0 20px;
-} */
 .nav-menu li:hover {
     padding: 10px 20px;
     border-radius: 6px;
@@ -199,30 +233,37 @@ body {
     filter: brightness(1.1);
     cursor: default;
 }
-@keyframes badgePulse {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-4px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
 
 .hero-title {
     font-size: 64px;
     margin: 0 0 10px 0;
+    font-weight: 800;
+    color: white;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-
 .hero-title span {
-    background: linear-gradient(to right, #fceb44, #f321d7, #9d1df3);
+    background: linear-gradient(
+        to right,
+        #f8ef42,
+        #f321d7,
+        #9d1df3,
+        #f321d7,
+        #f8ef42
+    );
+    background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: flowGradient 4s linear infinite;
+    display: inline-block;
+}
+.hero-title:hover {
+    transform: translateY(-5px) scale(1.02);
 }
 
+.hero-title:hover span {
+    filter: drop-shadow(0 0 15px rgba(243, 33, 215, 0.4));
+}
 .hero-subtitle {
     font-size: 18px;
     color: #b3b3b3;
@@ -247,14 +288,11 @@ body {
     max-width: 1000px;
     margin: 0 auto;
 }
-
-/* 1. Typography */
 .section-title {
     font-size: 48px;
     font-weight: 800;
     margin-bottom: 30px;
 }
-
 .description p {
     color: #b3b3b3;
     font-size: 18px;
@@ -266,34 +304,28 @@ body {
     margin-top: 30px;
     font-weight: 500;
 }
-
 .divider {
     border: 0;
     border-top: 1px solid #1f1435;
     margin: 60px 0;
 }
-
-/* 2. Statistics Row */
 .stats-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
-
 .stat-item {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 .stat-number {
     font-size: 42px;
     font-weight: 800;
     color: #00ffaa;
     letter-spacing: -1px;
 }
-
 .stat-number .star {
     font-size: 32px;
     vertical-align: middle;
@@ -335,7 +367,6 @@ body {
     padding: 40px;
     border-radius: 24px;
     border: 1px solid rgba(157, 29, 243, 0.2);
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -603,14 +634,33 @@ body {
     color: #ffffff;
     font-weight: 800;
     margin-bottom: 25px;
+    display: inline-block;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .footer-logo span {
-    background: linear-gradient(90deg, #ff8a00, #f321d7, #9d1df3);
+    background: linear-gradient(
+        to right,
+        #f8ef42,
+        #f321d7,
+        #9d1df3,
+        #f321d7,
+        #f8ef42
+    );
+    background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: flowGradient 4s linear infinite;
+    display: inline-block;
 }
+.footer-logo:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+.footer-logo:hover span {
+    filter: drop-shadow(0 0 20px rgba(243, 33, 215, 0.6));
+}
+
 .footer-nav {
     display: flex;
     justify-content: center;

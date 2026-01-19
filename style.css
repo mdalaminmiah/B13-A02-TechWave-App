@@ -198,18 +198,38 @@ body {
     position: relative;
     display: inline-block;
     margin-bottom: 30px;
+    filter: drop-shadow(0 0 50px rgba(243, 33, 215, 0.3));
 }
 
 .podcast-circle {
     width: 260px;
     height: 260px;
     border-radius: 50%;
-    background: linear-gradient(to bottom right, #fceb44, #f321d7, #9d1df3);
+    background: linear-gradient(135deg, #fceb44 10%, #f321d7 50%, #9d1df3 90%);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     font-size: 60px;
-    box-shadow: 0 0 40px rgba(243, 33, 215, 0.4);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+.podcast-circle::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fceb44, #f321d7, #9d1df3);
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(12px);
+}
+.podcast-circle img {
+    width: 120px;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+    z-index: 2;
 }
 
 .badge-new {

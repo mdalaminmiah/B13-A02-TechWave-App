@@ -695,6 +695,43 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.footer-nav a img {
+    width: 20px;
+    height: 20px;
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.footer-nav a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+.footer-nav a:hover img {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0 0 8px rgba(0, 255, 170, 0.6));
+}
+.footer-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #f8ef42, #f321d7);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.footer-nav a:hover::after {
+    width: 80%;
 }
 
 .copyright {

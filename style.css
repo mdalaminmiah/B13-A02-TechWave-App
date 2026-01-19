@@ -308,7 +308,7 @@ body {
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 200px 200px;
+    grid-template-rows: 250px 250px 250px;
     grid-template-areas:
         'PremiumAudio MobileFriendly MobileFriendly'
         'PremiumAudio GlobalCommunity GlobalCommunity'

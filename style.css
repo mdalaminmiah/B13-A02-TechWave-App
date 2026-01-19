@@ -897,7 +897,7 @@ body {
         flex-direction: column;
         gap: 50px;
     }
-
+    /* Host section start */
     .host-container {
         flex-direction: column;
         padding: 40px 20px;
@@ -912,14 +912,36 @@ body {
         width: 150px;
         height: 150px;
     }
+    /* Host section End */
 
+    /* Footer section Start */
+    .footer-section {
+        padding: 60px 20px;
+        background-position: center bottom;
+    }
+    .footer-logo {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
     .footer-nav {
-        /* flex-direction: column; */
-        gap: 15px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        gap: 20px 30px;
+        margin-bottom: 40px;
+    }
+    .footer-nav a {
+        font-size: 0.9rem;
+        justify-content: flex-start;
     }
 
-    .footer-bg-image {
-        background-size: contain;
+    .footer-nav img {
+        width: 18px;
+    }
+    .copyright {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        padding: 0 10px;
     }
 }
 

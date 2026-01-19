@@ -187,20 +187,6 @@ body {
     gap: 20px;
     justify-content: center;
 }
-
-/* .btn-spotify {
-    background: linear-gradient(to right, #fceb44, #f321d7, #9d1df3);
-    border: none;
-    padding: 12px 28px;
-    border-radius: 50px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-} */
-
 /* Hero Or Bannar section End */
 
 /* About Section Start */
@@ -276,7 +262,6 @@ body {
 
 /* About Section End */
 /* Why Choose Section Start */
-/* Container Setup */
 .why-choose {
     padding: 80px 5%;
     color: white;
@@ -299,21 +284,15 @@ body {
 }
 
 .feature-card {
-    background-color: #160a2c; /* Main card color */
+    background-color: #160a2c;
     padding: 40px;
     border-radius: 24px;
-
-    /* Subtle border that isn't too bright yet */
     border: 1px solid rgba(157, 29, 243, 0.2);
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    /* Smooth transition for every property */
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    /* Subtle shadow to lift the card slightly off the dark background */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
@@ -350,12 +329,6 @@ body {
     font-size: 1rem;
     margin: 0;
 }
-/* .feature-card:hover {
-    transform: translateY(-10px);
-    border-color: #f321d7;
-    box-shadow: 0 0 25px rgba(243, 33, 215, 0.4);
-    transition: all 0.3s ease;
-} */
 
 .feature-card::before {
     content: '';
@@ -372,22 +345,277 @@ body {
     pointer-events: none;
 }
 .feature-card:hover {
-    transform: translateY(
-        -12px
-    ); /* Moves up slightly more for a premium feel */
+    transform: translateY(-12px);
     border-color: #f321d7;
-
-    /* The Intense Neon Glow from your image */
     box-shadow: 0 0 30px rgba(243, 33, 215, 0.4);
-    background-color: #1c0d3a; /* Slightly brightens the card background on hover */
+    background-color: #1c0d3a;
 }
 /* Why Choose Section End */
+
+/* Featured Episodes Section Start */
+.episodes-section {
+    padding: 80px 0;
+    background-color: #0b031a;
+}
+
+.section-title {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.episode-card {
+    background-color: #160a2c;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #25164d;
+    transition: all 0.3s ease;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 1;
+}
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: white;
+    font-weight: 600;
+}
+
+.card-body p {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.duration {
+    color: #00ffaa;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.duration img {
+    width: 16px;
+    height: 16px;
+}
+.episode-card:hover {
+    transform: translateY(-10px);
+    border-color: #f321d7;
+    box-shadow: 0 10px 30px rgba(243, 33, 215, 0.2);
+}
+
+.episode-card:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+/* Featured Episodes Section End */
+
+/* Host Section Start  */
+.host-section {
+    padding: 100px 20px;
+    background-color: #0b031a;
+    text-align: center;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+.host-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #160a2c;
+    border-radius: 40px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+    border: 1px solid #25164d;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+.host-container:hover {
+    transform: translateY(-10px);
+    border-color: #f321d7;
+    box-shadow: 0 20px 40px rgba(243, 33, 215, 0.15);
+}
+.host-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid transparent;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
+}
+.host-container:hover .host-img {
+    transform: scale(1.05);
+    border-color: #f8ef42;
+}
+.host-name {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.host-bio {
+    color: #b3b3b3;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+.host-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #3d2b5e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.social-link:hover {
+    border-color: transparent;
+    background: linear-gradient(135deg, #eeb517 0%, #0e92c7 50%, #86f0c7 100%);
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Host Section End  */
+/* Footer section  start  */
+.footer-section {
+    background-color: #1a0b2e;
+    padding: 100px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url('./assets/footer-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.footer-bg-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+.footer-logo {
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.footer-logo span {
+    background: linear-gradient(90deg, #ff8a00, #f321d7, #9d1df3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-nav a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copyright {
+    color: #666666;
+    font-size: 0.85rem;
+}
+
+/* Footer section  End  */
 
 /* Responsive Start */
 @media (max-width: 768px) {
     .stats-container {
         flex-direction: column;
         gap: 50px;
+    }
+
+    .host-container {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .host-socials {
+        justify-content: center;
+    }
+
+    .host-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-bg-image {
+        background-size: contain;
     }
 }
 

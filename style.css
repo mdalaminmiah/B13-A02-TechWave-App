@@ -29,8 +29,11 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .btn-primary:hover {
-    transform: scale(0.8);
-    opacity: 0.9;
+    transform: scale(1.05);
+    opacity: 1;
+}
+.btn-primary:hover span {
+    transform: translateX(8px);
 }
 
 .btn-outline-primary {
@@ -182,7 +185,7 @@ body {
 
 /* Hero Or Bannar section start */
 .hero-section {
-    position: relative;
+    /* position: relative;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -192,12 +195,36 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
+    overflow: hidden; */
+    position: relative;
+    min-height: 100vh; /* Fill the screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    background-image: url('./assets/hero-bg.png');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
+}
+.hero-content {
+    /* max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 5; */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    position: relative;
 }
 .podcast-circle-wrapper {
     position: relative;
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     filter: drop-shadow(0 0 50px rgba(243, 33, 215, 0.3));
 }
 
@@ -306,6 +333,8 @@ body {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 /* Hero Or Bannar section End */
 
